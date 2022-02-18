@@ -2,10 +2,10 @@
 """
 Created on Wed Jan 26 23:00:50 2022
 
-@author: aiatu
+@author: aiatul
 """
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
