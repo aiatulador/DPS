@@ -31,7 +31,6 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, strati
 
 classifier = svm.SVC(kernel='linear')
 classifier.fit(x_train,y_train)
-SVC(kernel='linear')
 x_train_prediction = classifier.predict(x_train)
 training_data_accuracy = accuracy_score(x_train_prediction, y_train)
 print('Accuracy score of the training data : ', training_data_accuracy)
