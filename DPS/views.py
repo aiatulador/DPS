@@ -2,12 +2,10 @@ from django.shortcuts import render
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-#from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-#from sklearn import svm
 from sklearn.metrics import accuracy_score
-#import sklearn.linear_model as lm
+
 
 
 def home(request):
@@ -38,8 +36,8 @@ def result(request):
 
     result1 = ""
     if DPS_predict == [1]:
-        result1 = "Diabetics positive"
+        result1 = "Diabetics Positive"
     else:
-        result1 = "Diabetics negative"
+        result1 = "Diabetics Negative"
 
     return render(request, 'predict.html', {'result2': result1})
