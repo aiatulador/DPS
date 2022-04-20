@@ -1,3 +1,5 @@
+from random import random
+
 from django.shortcuts import render
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,12 +34,12 @@ def result(request):
     value7 = float(request.GET['n7'])
     value8 = float(request.GET['n8'])
 
-    DPS_predict = model.predict([[value1, value2, value3, value4, value5, value6, value7, value8]])
+    DPS_predict = model.predict([[value1, value2, value3, value4, value5, value6,value7, value8]])
 
     result1 = ""
     if DPS_predict == [1]:
-        result1 = "Diabetics Positive"
+        result1 = "High Chance of Diabetics"
     else:
-        result1 = "Diabetics Negative"
+        result1 = "No Diabetics"
 
     return render(request, 'predict.html', {'result2': result1})
